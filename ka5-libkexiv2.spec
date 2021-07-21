@@ -27,6 +27,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Libkexiv2 is a wrapper around Exiv2.
 
+%description -l pl.UTF-8
+Libkexiv2 jest wraperem wokół Exiv2.
+
 %package devel
 Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
