@@ -1,15 +1,15 @@
-%define		kdeappsver	21.12.0
+%define		kdeappsver	21.12.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		libkexiv2
 Summary:	libkexiv2
 Name:		ka5-%{kaname}
-Version:	21.12.0
+Version:	21.12.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	a3315285a8ae0337a153038ee7d6ad6a
+# Source0-md5:	c472fe1582159aa345597d3dce66133c
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
