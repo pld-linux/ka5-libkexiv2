@@ -1,21 +1,23 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
+
 %define		kdeappsver	23.04.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		libkexiv2
-Summary:	libkexiv2
+Summary:	libkexiv2 - KDE Exiv2 wrapper
+Summary(pl.UTF-8):	libexiv2 - obudowanie Exiv2 dla KDE
 Name:		ka5-%{kaname}
 Version:	23.04.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	889f8a0585e91e23cf4acc64da8c950b
-URL:		http://www.kde.org/
+URL:		https://kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5Gui-devel
+BuildRequires:	Qt5Gui-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	exiv2-devel >= 0.24
 BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
@@ -66,6 +68,7 @@ ctest
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %ninja_install -C build
 
 %clean
