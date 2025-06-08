@@ -57,12 +57,12 @@ Pliki nagłówkowe dla programistów używających %{kaname}.
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+
 %ninja_build -C build
 
 %if %{with tests}
 ctest --test-dir build
 %endif
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -78,7 +78,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libKF5KExiv2.so.5.*.*
-%{_libdir}/libKF5KExiv2.so.15.*.*
+# soname symlink
+%{_libdir}/libKF5KExiv2.so.15.0.0
 %{_datadir}/qlogging-categories5/libkexiv2.categories
 
 %files devel
