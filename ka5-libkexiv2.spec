@@ -29,7 +29,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	Qt5Core >= %{qt_ver}
 Requires:	Qt5Gui >= %{qt_ver}
-Requires:	exiv2 >= 0.25
+Requires:	exiv2-libs >= 0.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
